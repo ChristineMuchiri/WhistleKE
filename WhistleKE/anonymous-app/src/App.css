@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #0d0d0d; /* Deep dark background */
+  color: #e0e0e0;            /* Light text */
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background-image: 
+    radial-gradient(#111 1px, transparent 1px),
+    radial-gradient(#111 1px, transparent 1px);
+  background-position: 0 0, 5px 5px;
+  background-size: 10px 10px;
+}
+.accent {
+  color: #ff0055;
+}
+.app-container {
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: 
+    radial-gradient(#111 1px, transparent 1px),
+    radial-gradient(#111 1px, transparent 1px);
+  background-position: 0 0, 5px 5px;
+  background-size: 10px 10px;
+  position: relative;
+  padding: 2rem;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch {
+  animation: glitch 1s infinite;
+}
