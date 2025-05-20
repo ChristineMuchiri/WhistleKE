@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Home from './pages/Home';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login.jsx';
+import Home from './pages/Home.jsx';
+
 
 function App() {
-  const [userId, setUserId] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="app-container">
-      {!userId ? (
-        <Login onLogin={(hash) => setUserId(hash)} />
-      ) : (
-        <div className="text-green-400 text-center mt-10 font-mono">
-          ✅ Logged in as: <br />
-          <code className="text-xs">{userId}</code>
-        </div>
-      )}
-    </div>
+    <Router>
+      <Routes>
+        {/* redirecting root path (/) to "/login" */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<Login onLogin={() => setIsLoggedIn(true)}/>} />
+        <Route path="/home" element={isLoggedIn? <Home /> : <Navigate to="/login" replace />}  />
+      </Routes>
+    </Router>
   );
 }
 

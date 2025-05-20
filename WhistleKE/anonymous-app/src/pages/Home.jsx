@@ -1,7 +1,9 @@
+import './Home.css';
+
 const Home = () => {
     return (
-        <div className="text-black p-6">
-            <h1 className="text-2xl">Welcome to Whistle KE</h1>
+        <div>
+            <h1>Welcome to Whistle KE</h1>
         </div>
     );
 };
