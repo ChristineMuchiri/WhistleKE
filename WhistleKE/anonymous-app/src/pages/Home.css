@@ -1,0 +1,65 @@
+/* Home.css */
+.home-container {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.header {
+  border-bottom: 2px solid #ff0055;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.feed {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.whistle {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-id {
+  font-weight: bold;
+  color: #ff0055;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.drop-leak-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #ff0055;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0055aa;
+  z-index: 1000;
+}
+
+.drop-leak-button:hover {
+  background-color: #e6004c;
+}
+
+.leak-button {
+  background-color: #ff0055;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+

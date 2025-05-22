@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import crypto from "crypto-js";
 import './Login.css';
 
 const Login = ({ onLogin }) => {
   const [passphrase, setPassphrase] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const Login = ({ onLogin }) => {
     }
     const hashedId = crypto.SHA256(passphrase).toString();
     onLogin(hashedId);
+    navigate("/Home");
   };
 
   return (
