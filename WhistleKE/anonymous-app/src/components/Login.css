@@ -18,7 +18,9 @@
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
+  flex-direction: column;
   color: #e0e0e0;
+  gap: 15px;
 }
 
 .login-input {
@@ -44,4 +46,27 @@
   background-color: #0d0d0d;
   transform: scale(1.05);  
   box-shadow: 0 5px 15px #00ffee;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 8px;
+}
+.remember-me input {
+  margin-right: 0.5rem;
+}
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-form {
+    gap: 12px;
+  }
 }
